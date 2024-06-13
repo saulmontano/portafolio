@@ -1,0 +1,72 @@
+  
+  .mode .sun-moon,
+  .mode .mode-text,
+  .mode .toggle-switch {
+    float: left;
+  }
+  
+  .sun-moon {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    transition: color 0.3s ease;
+   
+  }
+  .icon.moon{
+    display: none;
+  }
+  
+  body.dark .icon.sun {
+    display:flex;
+    color: rgba(253, 204, 103, 1);
+  }
+  
+  .mode-text {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px; /* Margin between text and switch */
+  }
+  body.dark .mode-text{
+    color: white;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: #333; /* Use your existing toggle color variable */
+    transition: background-color 0.3s ease;
+    margin:7px;
+  }
+  
+  .switch::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: rgb(99%, 80%, 40%); /* Use your existing switch dot color variable */
+    transition: left 0.3s ease;
+  }
+  
+  body.dark .toggle-switch {
+    background-color: #555353; /* Use your existing toggle color for dark mode */
+  }
+  
+  body.dark .switch::before {
+    background-color: rgb(99%, 80%, 40%); /* Use your existing switch dot color for dark mode */
+    left: 20px;
+  }
+  
+  

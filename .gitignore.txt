@@ -1,0 +1,4 @@
+./index.html
+./assets/css/style.css
+./assets/css/light-theme.css
+./assets/js/script.js
